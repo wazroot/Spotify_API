@@ -13,11 +13,11 @@ from sqlalchemy.orm import sessionmaker
  
 
 # Spotify user id and token
-SPOTIFY_ID = 'n7ftfbs1e4lj61iv52vmbmjb5'
-SPOTIFY_TOKEN = 'BQBnHWSAX0fEs7mxrVKXJ14xO_NRnUOzLECFkZ17BaoZBY7aW1zuPicnoH20ZkCmfW2JpWxEeHZuAa9rKVEN6tsHhchKqGZkSFN68ivvaFz4S4eKGlNjHlam73UrowcocgfZWzb6Mp7Y5C4B77yS1atSZYcPadJlT7XRsOoRP5a-Lg'
+SPOTIFY_ID = 'your_spotify_id'
+SPOTIFY_TOKEN = 'unique_spotify_token_for_you'
 
 # DB location
-DATABASE = 'postgresql+psycopg2://Juhamatti Vasamaa:@localhost/Spotify'    
+DATABASE = 'postgresql+psycopg2://username:password@localhost/database'    
 
 def is_data_valid(df: pd.DataFrame) -> bool:
     
@@ -94,7 +94,7 @@ if __name__ == '__main__':
     engine = create_engine(DATABASE)
 
     # Opening connection to DB
-    connect = psycopg2.connect(user='Juhamatti Vasamaa',password='',host='localhost',database='Spotify')
+    connect = psycopg2.connect(user='username',password='password',host='localhost',database='database')
     
     # Creating data table with sqlalchemy to my Postrges DB 
     meta = MetaData()
